@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/*==========Reset CSS==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*==========Btn==========*/
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    min-height: 100vh;
+}
+.btn label {
+    position: relative;
+    height: 75px;
+}
+.btn label input {
+    appearance: none;
+}
+.btn label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn label input:checked ~ span {
+    left: 0;
+}
+.btn label span i {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.25);
+    transition: .5s;
+}
+.btn label input:checked ~ span i {
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
